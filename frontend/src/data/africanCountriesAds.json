@@ -185,5 +185,16 @@
     "description": "Zimbabwe's 247Market community spans Harare, Bulawayo and Mutare — solar and backup power equipment, smartphones, fuel-efficient cars and commercial property all trade directly with trusted local traders around the clock.",
     "cities": ["Harare", "Bulawayo", "Mutare"],
     "popularCategories": ["Solar & Energy", "Vehicles", "Phones & Gadgets"]
+  },
+  {
+    "slug": "south-korea",
+    "name": "South Korea",
+    "flag": "🇰🇷",
+    "currency": "KRW (₩)",
+    "listings": "1,200+",
+    "tagline": "Seoul and Busan's vibrant marketplace",
+    "description": "South Korea's 247Market community spans Seoul, Busan and Incheon — electronics, chemical solutions, cosmetics, K-fashion, and high-tech gadgets trade directly with trusted local traders around the clock.",
+    "cities": ["Seoul", "Busan", "Incheon"],
+    "popularCategories": ["Electronics", "Fashion & Beauty", "Gadgets"]
   }
 ]

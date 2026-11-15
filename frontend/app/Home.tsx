@@ -18,6 +18,7 @@ import countries from "../src/data/africanCountriesAds.json";
 import Footer from "../src/components/footer/Footer";
 import FaqAccordion from "../src/components/faq/FaqAccordion";
 import { MARKETPLACE_FAQS } from "../src/data/marketplaceFaqs";
+import WorldMap from "../src/components/map/WorldMap";
 
 const STEPS = [
   {
@@ -193,6 +194,8 @@ const Home = ({ stats }: HomeProps) => {
         </div>
       </section>
 
+      <WorldMap countries={countries} />
+
       <section className="w-[90%] max-w-[1240px] mx-auto px-4 lg:px-5 pt-10 pb-[70px] lg:pb-[110px] text-center">
         <div className={sectionHeading}>
           <span className={eyebrow}>Across the continent</span>
@@ -239,7 +242,7 @@ const Home = ({ stats }: HomeProps) => {
           <h2 className={sectionHeadingH2}>Everything you need to trade with confidence</h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="bg-white border border-[#e7e2d8] rounded-2xl px-6 py-[30px] text-left transition-[0.25s] hover:-translate-y-1 hover:shadow-[0_20px_34px_-18px_rgba(7,19,40,0.25)] hover:border-transparent">
             <RiCompassDiscoverLine className="text-[30px] text-accent mb-4 bg-accent-soft p-2.5 rounded-xl box-content" />
             <h3 className="mb-2 text-lg font-bold text-navy">Discover Easily</h3>
