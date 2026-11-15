@@ -6,7 +6,8 @@ import {
   Geographies,
   Geography,
 } from "react-simple-maps";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
@@ -31,7 +32,11 @@ export default function WorldMap({ countries }: WorldMapProps) {
   const [selectedCountry, setSelectedCountry] =
     useState<Country | null>(null);
 
-  const router = useRouter();
+  // const router = useRouter();
+
+  const pathname = usePathname();
+
+  const activeSlug = pathname.startsWith("/ads-in-")? pathname.replace("/ads-in-", "") : null;
 
   // Create a lookup using country names
   const countryMap = new Map(
@@ -67,8 +72,7 @@ export default function WorldMap({ countries }: WorldMapProps) {
                   geo.properties.name?.toLowerCase();
 
                 const country = countryMap.get(countryName);
-                const isSelected =
-                  selectedCountry?.slug === country?.slug;
+                const isSelected = country?.slug === activeSlug;
 
                 return (
                   <Geography
