@@ -49,9 +49,9 @@ export default function WorldMap({ countries }: WorldMapProps) {
   return (
     <div className="w-full">
       <div className="rounded-2xl">
-        <p className="mb-5 text-xl text-center text-accent">
+        {activeSlug && <p className="mb-5 text-xl text-center text-accent">
           Select a country to explore its marketplace.
-        </p>
+        </p>}
 
         <ComposableMap
           projection="geoMercator"
