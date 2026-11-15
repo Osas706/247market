@@ -74,7 +74,7 @@ const CurrencySelector = ({ value, onChange, className = "", compact = false }: 
                 role="option"
                 aria-selected={c.code === value}
                 onClick={() => select(c.code)}
-                className={`w-full flex items-center gap-2.5 px-3.5 py-2 text-left text-sm transition ${
+                className={`w-full flex items-center gap-2.5 px-1 py-2 text-left text-sm transition ${
                   c.code === value
                     ? "bg-accent-soft dark:bg-white/10 text-navy dark:text-white font-semibold"
                     : "text-navy-ink/80 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5"
@@ -82,7 +82,7 @@ const CurrencySelector = ({ value, onChange, className = "", compact = false }: 
               >
                 <span className="text-base">{c.flag}</span>
                 <span className="font-semibold">{c.code}</span>
-                <span className="text-xs text-muted truncate">{c.label}</span>
+                <span className="text-xs truncate text-muted">{c.label}</span>
               </button>
             </li>
           ))}

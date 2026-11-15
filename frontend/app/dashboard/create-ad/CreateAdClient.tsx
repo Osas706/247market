@@ -132,7 +132,17 @@ const CreateAdClient = () => {
     formData.append("condition", adData.condition);
     formData.append("price", adData.price);
     formData.append("terms", adData.terms);
-    formData.append("adImage", adData.adImage);
+    
+    // formData.append("adImage", adData.adImage);
+    if (adData.adImage) {
+      const uri = adData.adImage;
+      const filename = uri.split("/").pop() || "ad-image.jpg";
+      const match = /\.(\w+)$/.exec(filename);
+      const type = match ? `image/${match[1]}` : `image/jpeg`;
+
+      formData.append("adImage", {uri, name: filename, type, } as any);
+    }
+    
     formData.append("firstName", adData.firstName);
     formData.append("lastName", adData.lastName);
     formData.append("email", adData.email);

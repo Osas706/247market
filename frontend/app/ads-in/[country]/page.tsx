@@ -8,6 +8,7 @@ import countries from "../../../src/data/africanCountriesAds.json";
 import Footer from "../../../src/components/footer/Footer";
 import FaqAccordion from "../../../src/components/faq/FaqAccordion";
 import { getCountryFaqs } from "../../../src/data/marketplaceFaqs";
+import WorldMap from "../../../src/components/map/WorldMap";
 
 const API_URL = "https://classifed-247market.onrender.com";
 
@@ -207,6 +208,10 @@ export default async function CountryAdsPage({ params }: { params: { country: st
           </ul>
         </div>
       </section>
+
+
+      <WorldMap countries={countries}  />
+      
 
       <section className="w-[90%] max-w-[900px] mx-auto pb-[90px] text-center">
         <h2 className="font-sora text-[22px] text-navy mb-6">Explore ads in other countries</h2>
