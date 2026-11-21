@@ -170,8 +170,6 @@ const CreateAdClient = () => {
 
   return (
     <form onSubmit={handleSubmit} className="mx-auto my-6 sm:my-[30px] mb-20 flex w-full sm:w-[92%] max-w-[720px] flex-col gap-6 sm:gap-[30px] px-4 sm:px-0">
-      <Background />
-
       <div className="text-center">
         <h1 className="mb-1 text-2xl sm:text-[28px] md:text-[36px] text-navy-ink">Create Your Ad</h1>
         <p className="mb-5 sm:mb-[26px] text-sm sm:text-base text-muted">What can we advertise for you today?</p>
