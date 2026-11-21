@@ -139,22 +139,15 @@ const CreateAdClient = () => {
       formData.append("lastName", adData.lastName);
       formData.append("email", adData.email);
       formData.append("phoneNumber", adData.phoneNumber);
+      if (adData.adImage instanceof File) {
+        formData.append("adImage", adData.adImage);
+      }
       formData.append("displayImage", adData.displayImage);
       formData.append("state", adData.state);
       formData.append("country", adData.country);
       formData.append("lat", lat);
       formData.append("long", long);
       formData.append("user", user);
-
-      // formData.append("adImage", adData.adImage);
-      if (adData.adImage) {
-        const uri = adData.adImage;
-        const filename = uri.split("/").pop() || "ad-image.jpg";
-        const match = /\.(\w+)$/.exec(filename);
-        const type = match ? `image/${match[1]}` : `image/jpeg`;
-
-        formData.append("adImage", {uri, name: filename, type, } as any);
-      }
     
       const res = await axios.post(`${url}/api/ads/add`, formData);
       if (res.data.success) {
