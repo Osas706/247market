@@ -56,7 +56,7 @@ export default function WorldMap({ countries }: WorldMapProps) {
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            scale: 110,
+            scale: 160,
           }}
           width={800}
           height={300}
@@ -64,6 +64,7 @@ export default function WorldMap({ countries }: WorldMapProps) {
             width: "100%",
             height: "auto",
           }}
+          className="h-[500px] sm:h-[400px] lg:h-[300px]"
         >
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
